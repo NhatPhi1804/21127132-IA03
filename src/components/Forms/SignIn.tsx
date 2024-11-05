@@ -23,14 +23,12 @@ const schema = yup.object({
 export default function SignIn() {
   const navigate = useNavigate();
   const { login, setEmail } = useAuthStore();
-  const { msg, setMsg } = useMsgStore();
+  const { msg } = useMsgStore();
 
   const [errorMsg, setErrorMsg] = useState("");
   const {
     register,
     handleSubmit: onSubmit,
-    setError,
-    watch,
     formState: { errors },
   } = useForm<ICreateUserData>({ resolver: yupResolver(schema) });
 

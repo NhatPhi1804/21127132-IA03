@@ -39,7 +39,7 @@ const schema = yup.object({
 export default function SignUp() {
   const navigate = useNavigate();
   const [error, setError] = useState("");
-  const { msg, setMsg } = useMsgStore();
+  const { setMsg } = useMsgStore();
   const [passwordRequirements, setPasswordRequirements] = useState({
     minLength: false,
     hasNumber: false,
